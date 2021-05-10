@@ -12,8 +12,6 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* code need to add for auth */}
-        {/* AmplifySignOut a sign out button, move it to where we want */} 
         <h2> My test amplify App content</h2>
         <AmplifySignOut />      
       </header>
