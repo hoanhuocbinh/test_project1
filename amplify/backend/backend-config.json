@@ -1,1 +1,11 @@
-{}
+{
+  "function": {},
+  "auth": {
+    "testproject14b7bf2bc": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}

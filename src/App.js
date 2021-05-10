@@ -1,26 +1,24 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+// need to install "npm install --save aws-amplify @aws-amplify/ui-react"
+import Amplify from 'aws-amplify';      // code need to add for auth
+import awsconfig from './aws-exports';  // code need to add for auth
+import { AmplifySignOut,withAuthenticator } from '@aws-amplify/ui-react';   // code need to add for auth
+
+Amplify.configure(awsconfig)  // code need to add for auth
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <h1> This is my test project web app!</h1>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Hello from test Pull Request Preview!!!
-        </a>
+        {/* code need to add for auth */}
+        {/* AmplifySignOut a sign out button, move it to where we want */} 
+        <h2> My test amplify App content</h2>
+        <AmplifySignOut />      
       </header>
     </div>
   );
 }
 
-export default App;
+export default withAuthenticator(App);    // code need to modify for auth
